@@ -58,7 +58,7 @@
 		<?php // Interior Header Image ?>
 		<div class="banner-wrap">
 			<div id="banner">
-				<?php do_action('slideshow_deploy', '14'); ?>
+				<?php do_action('slideshow_deploy', '119'); ?>
 			</div>
 		</div>
 
