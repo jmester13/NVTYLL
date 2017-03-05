@@ -29,7 +29,8 @@
 
 				<?php dynamic_sidebar( 'footer-sidebar' ); ?>
 
-				<p class="col-sm-12 source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+				<p class="col-sm-12 source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> 
+				| Designed & Developed by <a href="http://joemester.com/" target="_blank"> Joe Mester </a> </p>
 
 			</div>
 
