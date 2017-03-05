@@ -11,7 +11,7 @@ Here you can easily toggle on/off modules and files.
 /** STEP 1: Reset **/
 @import "libs/normalize";
 
-/** STEP 2: Utilities **/
+/** STEP 2: Utilities **/ 
 @import "utilities/variables";
 @import "utilities/mixins";
 @import "utilities/accessibility";
@@ -30,7 +30,7 @@ Here you can easily toggle on/off modules and files.
 @import "elements/widgets";
 
 /** STEP 5: Plugins **/
-@import "plugins/gravity-forms/base"; // gravity forms styles - uncheck box to NOT output default CSS
+/*@import "plugins/gravity-forms/base";  */ // gravity forms styles - uncheck box to NOT output default
 
 /** STEP 6: Libraries **/
 @import "libs/select2"; // better cross browser select input - see https://select2.github.io/

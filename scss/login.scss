@@ -12,7 +12,7 @@ http://codex.wordpress.org/Creating_Admin_Themes
 
 ******************************************************************/
 
-@import "compass";
+
 
 body.login {}
 
@@ -39,7 +39,7 @@ body.login {}
 form {
 	background: white;
 	border: 1px solid #E5E5E5;
-	@include border-radius(3px);
+	/*@include border-radius(3px);*/
 	@include box-shadow(none);
 	font-weight: normal;
 	margin-left: 8px;

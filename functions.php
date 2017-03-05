@@ -417,6 +417,16 @@ function scaffolding_register_sidebars() {
 		'before_title'    => '<h4 class="widgettitle">',
 		'after_title'     => '</h4>',
 	));
+
+	register_sidebar(array(
+		'id'              => 'footer-sidebar',
+		'name'            => __('Footer Sidebar', 'scaffolding'),
+		'description'     => __('The Footer sidebar used for the interior call to actions.', 'scaffolding'),
+		'before_widget'   => '<div id="%1$s" class="widget col-sm-4 %2$s">',
+		'after_widget'    => '</div>',
+		'before_title'    => '<h4 class="widgettitle">',
+		'after_title'     => '</h4>',
+	));
 } // end scaffolding_register_sidebars()
 
 
@@ -644,3 +654,104 @@ add_action( 'init', 'scaffolding_change_post_object_label' );
  ************************************/
 
 // Add your custom functions here
+function scpt_demo() {
+    if ( ! class_exists( 'Super_Custom_Post_Type' ) )
+        return;
+
+    $tournament = new Super_Custom_Post_Type( 'tournament' );
+
+    # Test Icon. Should be a square grid.
+    $tournament->set_icon( 'th-large' );
+
+    # Taxonomy test, should be like tags
+    $tournament_tags = new Super_Custom_Taxonomy( 'tournament-tag' );
+
+    # Taxonomy test, should be like categories
+    $tournament_cats = new Super_Custom_Taxonomy( 'tournaments', 'Tournament Cat', 'Tournament Cats', 'category' );
+
+    # Connect both of the above taxonomies with the post type
+    connect_types_and_taxes( $tournament, array( $tournament_tags, $tournament_cats ) );
+
+    # Add a meta box with every field type
+    $tournament->add_meta_box( array(
+        'id'      => 'Tournament Info',
+        'context' => 'normal',
+        'fields'  => array(
+            'textbox-demo'        => array(),
+          
+            
+            'checkboxes-demo'     => array( 'type' => 'checkbox', 'options' => array( 'one', 'two', 'three' ) ),
+            'radio-buttons-demo'  => array( 'type' => 'radio',    'options' => array( 'one', 'two', 'three' ) ),
+            'select-demo'         => array( 'type' => 'select',   'options' => array( 1 => 'one', 2 => 'two', 3 => 'three' ) ),
+            'multi-select-demo'   => array( 'type' => 'select',   'options' => array( 'one', 'two', 'three' ), 'multiple' => 'multiple' ),
+            'date-demo'           => array( 'type' => 'date' ),
+            'label-override-demo' => array( 'label' => 'Label Demo' )
+        )
+    ) );
+
+    # Add another CPT to test one-to-one (it could just as easily be one-to-many or many-to-many) relationships
+    $player = new Super_Custom_Post_Type( 'player', 'Player', 'Player' );
+    # Taxonomy test, should be like tags
+    $player_tags = new Super_Custom_Taxonomy( 'player-tag' );
+
+    # Taxonomy test, should be like categories
+    $player_cats = new Super_Custom_Taxonomy( 'player', 'player Cat', 'player Cats', 'category' );
+
+    # Connect both of the above taxonomies with the post type
+    connect_types_and_taxes( $player, array( $player_tags, $player_cats ) );
+
+    $player->add_meta_box( array(
+        'id'      => 'one-to-one',
+        'title'   => 'Player Information',
+        'context' => 'side',
+        'fields'  => array(
+            'email'        => array(),
+            'position'     => array( 'type' => 'checkbox', 'options' => array( 
+            		'Attack', 
+            		'Midfield', 
+            		'Defense',
+            		'LSM',
+            		'Goalie',
+            		'FOGO'	
+            		 ) 
+            	),
+            'hand'  => array( 'type' => 'radio',    
+            		'options' => array( 
+            			'left', 
+            			'right' 
+            			) 
+            		),
+        )
+    ) );
+    $player->set_icon( 'cogs' );
+
+    $coach = new Super_Custom_Post_Type( 'coach', 'Coach', 'Coaches' );
+   $coach->add_meta_box( array(
+        'id'      => 'coache-info',
+        'title'   => 'Coaches Information',
+        'context' => 'side',
+        'fields'  => array(
+        	'title'        => array(),
+            'email'        => array(),
+            'phone'        => array()
+        )
+    ) );
+    $coach->set_icon( 'cogs' );
+
+     $board = new Super_Custom_Post_Type( 'board', 'Board', 'Board Members' );
+   $board->add_meta_box( array(
+        'id'      => 'board member-info',
+        'title'   => 'board members Information',
+        'context' => 'side',
+        'fields'  => array(
+        	'title'        => array(),
+            'email'        => array(),
+            'phone'        => array(),
+        )
+    ) );
+    $board->set_icon( 'cogs' );
+
+
+}
+add_action( 'after_setup_theme', 'scpt_demo' );
+

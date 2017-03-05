@@ -10,7 +10,7 @@
 ?>
 
 					</div><?php // END #main ?>
-
+<!-- <?php get_sidebar('none'); ?> -->
 				</div><?php // END .row ?>
 
 			</div><?php // END #inner-content ?>
@@ -27,10 +27,9 @@
 
 				</nav>
 
-					<?php dynamic_sidebar( 'footer-sidebar' ); ?>
+				<?php dynamic_sidebar( 'footer-sidebar' ); ?>
 
-				<p class="col-sm-12 source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> 
-				| Designed & Developed by <a href="http://joemester.com/"> Joe Mester </a> </p>
+				<p class="col-sm-12 source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 
 			</div>
 

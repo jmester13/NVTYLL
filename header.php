@@ -33,7 +33,7 @@
 
 	<div id="container">
 
-		<header id="masthead" class="header" role="banner">
+		<!-- <header id="masthead" class="header" role="banner">
 
 			<div id="inner-header" class="wrap clearfix">
 
@@ -45,7 +45,7 @@
 
 			</div>
 
-		</header>
+		</header> -->
 
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'scaffolding' ); ?></a>
 
@@ -58,7 +58,7 @@
 		<?php // Interior Header Image ?>
 		<div class="banner-wrap">
 			<div id="banner">
-				<div class="spacer"></div>
+				<?php do_action('slideshow_deploy', '14'); ?>
 			</div>
 		</div>
 
@@ -66,18 +66,6 @@
 
 			<div id="inner-content" class="wrap clearfix">
 
-				<?php // Test for active sidebars to set the main content width
-					if ( is_active_sidebar( 'left-sidebar' ) && is_active_sidebar( 'right-sidebar' ) ) { // both sidebars
-						$main_class = 'col-sm-6 col-sm-push-3';
-					} elseif ( is_active_sidebar( 'left-sidebar' ) && ! is_active_sidebar( 'right-sidebar' ) ) { // left sidebar
-						$main_class = 'col-sm-9 col-sm-push-3';
-					} elseif ( ! is_active_sidebar( 'left-sidebar' ) && is_active_sidebar( 'right-sidebar' ) ) { // right sidebar
-						$main_class = 'col-sm-9';
-					} else { // no sidebar
-						$main_class = 'col-xs-12';
-					}
-				?>
-
 				<div class="row">
 
-					<div id="main" class="<?php echo $main_class; ?> clearfix" role="main">
+					<div id="main" class="col-sm-12 clearfix" role="main">

@@ -14,7 +14,7 @@ get_header(); ?>
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+			<article id="post-<?php the_ID(); ?>" <?php post_class( 'col-sm-9 clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 				<header class="article-header">
 
@@ -59,5 +59,5 @@ get_header(); ?>
 		<?php get_template_part ( 'template-parts/error' ); // WordPress template error message ?>
 
 	<?php endif; ?>
-
+	<div class="col-sm-3"><?php dynamic_sidebar( 'right-sidebar' ); ?> </div>
 <?php get_footer();
