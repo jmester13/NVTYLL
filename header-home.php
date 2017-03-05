@@ -55,12 +55,12 @@
 
 		</nav>
 
-	<!-- 	<?php // Interior Header Image ?>
+		<?php // Interior Header Image ?>
 		<div class="banner-wrap">
 			<div id="banner">
 				<?php do_action('slideshow_deploy', '119'); ?>
 			</div>
-		</div> -->
+		</div>
 
 		<div id="content">
 
