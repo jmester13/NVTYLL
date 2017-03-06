@@ -1066,6 +1066,7 @@ It currently slides out from the right.
     width: 70%;
     z-index: 1000; }
     #main-navigation ul.menu li {
+      color: #0a5115;
       border-bottom: 1px solid #111;
       display: block;
       margin: 0;
@@ -1172,6 +1173,35 @@ body.menu-open #container {
   left: -70%; }
 
 /* LARGER MOBILE DEVICES */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+  ul.menu {
+    height: 600px; }
+
+  #main-navigation {
+    background-color: #fff; } }
+/* IPHONE */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  ul.menu {
+    height: 600px; }
+
+  #main-navigation {
+    background-color: #fff; } }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  ul.menu {
+    height: 600px; }
+
+  #main-navigation {
+    background-color: #fff; } }
+/*iphone 5 */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  ul.menu {
+    height: 600px; }
+
+  #main-navigation {
+    background-color: #fff; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  ul.menu {
+    height: 47px; } }
 /* TABLET & SMALLER LAPTOPS */
 @media only screen and (min-width: 768px) {
   #mobile-menu-button {
@@ -2706,6 +2736,13 @@ Stylesheet: Pagination Stylesheet
   margin: 46px 0 25px 0;
   float: left;
   border-bottom: 6px solid #0a5115; }
+
+/* Google Form EMBED */
+span.quantumWizButtonPaperbuttonLabel.exportLabel {
+  display: none; }
+
+div#footer-nav {
+  padding: 20px 0 10px 0; }
 
 /******************************************************************
 Site Name:

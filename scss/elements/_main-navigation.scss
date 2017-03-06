@@ -56,7 +56,9 @@ It currently slides out from the right.
 		width: 70%;
 		z-index: 1000;
 
+
 		li {
+			color:$color__link;
 			border-bottom: 1px solid #111;
 			display: block;
 			margin: 0;
@@ -189,6 +191,7 @@ body.menu-open {
 	#main-navigation {
 		ul.menu {
 			display: block;
+
 		}
 	}
 
@@ -204,7 +207,70 @@ body.menu-open {
 }
 
 /* LARGER MOBILE DEVICES */
-@media only screen and (min-width: 481px) {}
+@media only screen and (min-width: 481px) {
+	
+}
+
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) { 
+ul.menu{
+		height:600px;
+	}
+	#main-navigation {
+		background-color: #fff;
+		}
+}
+
+
+/* IPHONE */
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+{ 
+
+ul.menu{
+		height:600px;
+	}
+	#main-navigation {
+		background-color: #fff;
+		}
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) {
+	ul.menu{
+		height:600px;
+	}
+	#main-navigation {
+		background-color: #fff;
+		}
+ }
+
+/*iphone 5 */
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) { 
+	ul.menu{
+		height:600px;
+	}
+	#main-navigation {
+		background-color: #fff;
+		}
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+ul.menu{
+		height:47px;
+	}
+}
+
 
 /* TABLET & SMALLER LAPTOPS */
 @media only screen and (min-width: $screen-sm-min) {

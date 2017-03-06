@@ -21,13 +21,13 @@
 
 			<div id="inner-footer" class="wrap clearfix">
 
-				<nav role="navigation" aria-label="<?php _e( 'Footer Navigation', 'scaffolding' ); ?>">
+				<?php dynamic_sidebar( 'footer-sidebar' ); ?>
+
+			<div id="footer-nav" class="col-sm-12"><nav role="navigation" aria-label="<?php _e( 'Footer Navigation', 'scaffolding' ); ?>">
 
 					<?php scaffolding_footer_nav(); ?>
 
-				</nav>
-
-				<?php dynamic_sidebar( 'footer-sidebar' ); ?>
+				</nav></div>
 
 				<p class="col-sm-12 source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> 
 				| Designed & Developed by <a href="http://joemester.com/" target="_blank"> Joe Mester </a> </p>

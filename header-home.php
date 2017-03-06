@@ -33,20 +33,6 @@
 
 	<div id="container">
 
-		<!-- <header id="masthead" class="header" role="banner">
-
-			<div id="inner-header" class="wrap clearfix">
-
-				<?php // to use an image just replace the bloginfo('name') with <img> ?>
-				<div id="logo" class="h1"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></div>
-
-				<?php // if you'd like to use the site description you can un-comment it below
-				// echo '<p class="site-description">' . bloginfo( "description" ) . '</p>' ?>
-
-			</div>
-
-		</header> -->
-
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'scaffolding' ); ?></a>
 
 		<nav id="main-navigation" class="clearfix" role="navigation" aria-label="<?php _e( 'Primary Navigation', 'scaffolding' ); ?>">
